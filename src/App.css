@@ -2,7 +2,26 @@
   text-align: center;
 }
 
-.App-logo {
+.nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 1vh;
+background: #2B32B4;
+color: #fff;
+
+}
+
+.nav-links{
+width: 40%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+list-style: none;
+
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
