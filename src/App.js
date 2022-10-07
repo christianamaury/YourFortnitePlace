@@ -4,7 +4,7 @@ import {About} from "./components/About";
 import {Nav} from "./components/Nav";
 import {Shop} from "./components/Shop";
 // To Handle Routing; BrowserRouter
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //About will only show whenever I go to the page
 // "/" the homepage of the website
@@ -14,11 +14,11 @@ function App() {
 <Router>
     <div className="App">
     <Nav/>
-     <Switch>
-       <Route path="/" exact component={Home} />
-       <Route path="/about" component={About} />
-       <Route path="/shop" component={Shop} />
-     </Switch>
+     <Routes>
+       <Route path="/" exact element={<Home/>} />
+       <Route path="/about" element={<About/>} />
+       <Route path="/shop" element={<Shop/>} />
+     </Routes>
     </div>
 </Router>
   );
