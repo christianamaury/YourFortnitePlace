@@ -7,7 +7,7 @@ import {Shop} from "./components/Shop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //About will only show whenever I go to the page
-
+// "/" the homepage of the website
 function App() {
   return (
 
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
     <Nav/>
      <Switch>
-       <Route path="/" component={Home} />
+       <Route path="/" exact component={Home} />
        <Route path="/about" component={About} />
        <Route path="/shop" component={Shop} />
      </Switch>
