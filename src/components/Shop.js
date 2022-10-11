@@ -1,17 +1,25 @@
 
 // useState holds my information & useEffect runs my fetch call when the component mounts
-import React, {Component, useState, useEffect} from 'react';
+import React, {Component, useState, useEffect} from "react";
 import '../App.css';
 
 function Shop() {
 
-    const fetchItems = async () => {
+// useEffect function; [] runs only once
+// Calling the fetchItems inside the useEffect
+useEffect (() => {
+fetchItems();
 
+}, []);
+
+    const fetchItems = async () => {
       // Previous API: https://fornite-public-api.theapinetwork.com/prod09/upcoming/get
       const data = await fetch ('https://fortnite-api.theapinetwork.com/upcoming/get');
 
+      //Converting data to a JSON file:
+      const items = await data.json();
 
-
+      console.log(items);
     }
 
     return (

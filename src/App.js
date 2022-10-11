@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 import {About} from "./components/About";
 import {Nav} from "./components/Nav";
-import {Shop} from "./components/Shop";
+import Shop from "./components/Shop";
 // To Handle Routing; BrowserRouter
+// Switch has been replaced by "Routes"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //About will only show whenever I go to the page
