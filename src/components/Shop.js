@@ -12,6 +12,9 @@ fetchItems();
 
 }, []);
 
+//Empty items array
+const [items, setItems] = useState([]);
+
     const fetchItems = async () => {
       // Previous API: https://fornite-public-api.theapinetwork.com/prod09/upcoming/get
       const data = await fetch ('https://fortnite-api.theapinetwork.com/upcoming/get');
@@ -20,11 +23,20 @@ fetchItems();
       const items = await data.json();
 
       console.log(items);
-    }
+      //Getting items array from the database
+      //items.items because we're accessing the items object from the array;
+      setItems(items.data);
+    };
 
     return (
     <div>
       <h1> Shop Page </h1>
+      {items.map(item => (
+        <h1 key={item.itemId}> {item.item.name} </h1>
+      ))}
+
+
+
     </div>
   );
 
