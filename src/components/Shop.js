@@ -1,6 +1,7 @@
 
 // useState holds my information & useEffect runs my fetch call when the component mounts
 import React, {Component, useState, useEffect} from "react";
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 function Shop() {
@@ -28,14 +29,17 @@ const [items, setItems] = useState([]);
       setItems(items.data);
     };
 
+    // Wrapping all items within the Link
     return (
     <div>
       <h1> Shop Page </h1>
       {items.map(item => (
-        <h1 key={item.itemId}> {item.item.name} </h1>
+        <h1 key={item.itemId}>
+          <Link to={`shop/${item.itemId}`}> 
+              {item.item.name}
+          </Link>
+        </h1>
       ))}
-
-
 
     </div>
   );
