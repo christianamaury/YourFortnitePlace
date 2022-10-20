@@ -35,7 +35,7 @@ const [items, setItems] = useState([]);
       <h1> Shop Page </h1>
       {items.map(item => (
         <h1 key={item.itemId}>
-          <Link to={`shop/${item.itemId}`}> 
+          <Link to={`/shop/${item.itemId}`}>
               {item.item.name}
           </Link>
         </h1>

@@ -3,6 +3,7 @@ import './App.css';
 import {About} from "./components/About";
 import {Nav} from "./components/Nav";
 import Shop from "./components/Shop";
+import ItemDetail from "./components/ItemDetail";
 // To Handle Routing; BrowserRouter
 // Switch has been replaced by "Routes"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -16,9 +17,10 @@ function App() {
     <div className="App">
     <Nav/>
      <Routes>
-       <Route path="/" exact element={<Home/>} />
+       <Route path="/" element={<Home/>} />
        <Route path="/about" element={<About/>} />
        <Route path="/shop" element={<Shop/>} />
+       <Route path="/shop/:Id" element={<ItemDetail/>} />
      </Routes>
     </div>
 </Router>
